@@ -10,6 +10,7 @@
 (defn- sanitize-class [name]
   (as-> name $
     (project-name $)
+    (name-to-path $)
     (s/split $ #"_+")
     (map s/capitalize $)
     (apply str $)))
@@ -22,20 +23,21 @@
 (defn bukkit-for-clojure
   "Creates a bukkit-for-clojure project"
   [name]
-  (let [data {:name name
-              :ns (multi-segment (sanitize-ns name) "plugin")
+  (let [main-ns (multi-segment (sanitize-ns name) "plugin")
+        data {:raw-name name
+              :name (project-name name) 
+              :ns main-ns
               :class (sanitize-class name)
               :package (sanitize-package name)
-              :simple-name (project-name name)
-              :sanitized (name-to-path name)
+              :sanitized (name-to-path main-ns)
               :year (year)}]
     (main/info "Generating fresh 'lein new' bukkit-for-clojure project.")
     (->files data
              ["README.md" (render "README.md" data)]
              ["project.clj" (render "project.clj" data)]
              ["resources/plugin.yml" (render "plugin.yml" data)]
-             ["src/{{sanitized}}/plugin.clj" (render "plugin.clj" data)]
-             [".gitignore" (render ".gitignore")]
-             [".hgignore" (render ".hgignore")]
-             [".gitattributes" (render ".gitattributes")]
-             ["LICENSE" (render "LICENSE")])))
+             ["src/{{sanitized}}.clj" (render "plugin.clj" data)]
+             [".gitignore" (render "gitignore" data)]
+             [".hgignore" (render "hgignore" data)]
+             [".gitattributes" (render "gitattributes" data)]
+             ["LICENSE" (render "LICENSE" data)])))

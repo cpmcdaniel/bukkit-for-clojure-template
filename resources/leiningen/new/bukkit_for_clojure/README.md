@@ -1,4 +1,4 @@
-# {{simple-name}}
+# {{name}}
 
 A Bukkit plugin to do... things. FIXME.
 
