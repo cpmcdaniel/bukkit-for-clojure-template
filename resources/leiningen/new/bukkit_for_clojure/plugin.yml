@@ -1,0 +1,13 @@
+name: {{class}}
+
+version: 1.0
+
+api-version: 1.16
+
+author: FIXME
+
+main: {{package}}.{{class}}
+
+# This ensures the Clojure runtime is loaded before 
+# this plugin is initialized.
+depend: [Bukkit4Clojure] 
