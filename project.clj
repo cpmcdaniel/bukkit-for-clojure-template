@@ -5,4 +5,6 @@
             :url "https://www.eclipse.org/legal/epl-2.0/"}
   :repositories [["releases" {:url "https://repo.clojars.org"
                               :creds :gpg}]]
+  :jar-inclusions [#"\.gitignore"
+                   #"\.hgignore"]
   :eval-in-leiningen true)
