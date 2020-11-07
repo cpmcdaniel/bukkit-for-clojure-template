@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file. This change
 
 ## Unreleased
 
+## 0.1.4
+### Changed
+- Updated Bukkit4Clojure dependency to version 1.0.6
+- Base classname changed for ClojurePlugin
+
 ## 0.1.3
 ### Changed
 - Hyphens in class name are now removed. 
