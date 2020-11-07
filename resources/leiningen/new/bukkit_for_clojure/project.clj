@@ -13,6 +13,6 @@
   ;; Clojure and bukkit-for-clojure libraries are both provided by the Bukkit4Clojure plugin.
   ;; Make sure you have that plugin installed on your server.
   :profiles {:provided {:dependencies [[org.clojure/clojure "1.10.1"]
-                                       [org.kowboy/bukkit-for-clojure "1.0.4"]
+                                       [org.kowboy/bukkit-for-clojure "1.0.6"]
                                        ;; This dependency is provided by the server itself.
                                        [org.spigotmc/spigot-api "1.16.3-R0.1-SNAPSHOT"]]}})
