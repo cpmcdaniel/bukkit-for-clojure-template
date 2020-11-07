@@ -1,7 +1,7 @@
 (ns {{ns}}
   (:gen-class
    :name {{package}}.{{class}}
-   :extends org.kowboy.bukkit.AbstractClojurePlugin)
+   :extends bukkitclj.ClojurePlugin)
   (:import [org.bukkit.plugin.java JavaPlugin]))
 
 (set! *warn-on-reflection* true)
