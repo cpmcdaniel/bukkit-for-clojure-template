@@ -4,7 +4,7 @@ A Leiningen template for creating [Bukkit](https://bukkit.org/) plugins in [Cloj
 
 ## Links
 
-- [Bukkt4Clojure plugin](FIXME) - A Bukkit plugin providing the Clojure
+- [Bukkt4Clojure plugin](https://dev.bukkit.org/projects/bukkit4clojure) - A Bukkit plugin providing the Clojure
   runtime and library for dependent plugins so they don't have to bother with including these. Also
   provides an abstract base class for your Clojure plugin. Go here to download the plugin.
 - [Bukkit4Clojure project](https://github.com/cpmcdaniel/Bukkit4Clojure) - The source code for the 
